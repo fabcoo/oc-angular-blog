@@ -10,15 +10,16 @@ export class BlogComponent implements OnInit {
   @Input() postTitle : string;
   @Input() postContent : string;
   @Input() postLoveITs: number;
+  @Input() postDate : string;
 
   constructor() { }
 
   addLove(){
-    console.log('Plus d\'amour !')
+    this.postLoveITs++
   }
 
   subLove(){
-    console.log('Moins d\'amour !')
+    this.postLoveITs--;
   }
 
   ngOnInit() {
