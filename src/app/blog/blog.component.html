@@ -1,3 +1,11 @@
-<p>
-  blog works!
-</p>
+<li [ngClass]="{'list-group-item mt-3': true,
+                'list-group-item-success': postLoveITs >= 1,
+                'list-group-item-danger': postLoveITs < 0}">
+    <h3>{{postTitle}}</h3>
+    <p>{{postContent}}</p>
+    <p>Amour : {{postLoveITs}}</p>
+    <button class="btn btn-success mr-3"
+            (click)="addLove()">J'adore !</button>
+    <button class="btn btn-danger"
+            (click)="subLove()">Je déteste !</button>
+</li>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  @Input() postTitle : string;
+  @Input() postContent : string;
+  @Input() postLoveITs: number;
+
   constructor() { }
+
+  addLove(){
+    console.log('Plus d\'amour !')
+  }
+
+  subLove(){
+    console.log('Moins d\'amour !')
+  }
 
   ngOnInit() {
   }
